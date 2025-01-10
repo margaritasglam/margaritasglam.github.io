@@ -1,0 +1,25 @@
+{
+  "productos": [
+    {
+      "nombre": "Conjunto negro",
+      "precio": 29.99,
+      "referencia": "imagen1",
+      "imagenPrincipal": "assets/ropaDeportiva/d1.jpg",
+      "subimagenes": [
+        "assets/ropaDeportiva/d1.jpg",
+        "assets/ropaDeportiva/d1-2.jpg"
+      ]
+    },
+    {
+      "nombre": "Conjunto azul",
+      "precio": 34.99,
+      "referencia": "imagen2",
+      "imagenPrincipal": "assets/ropaDeportiva/d2.jpg",
+      "subimagenes": [
+        "assets/ropaDeportiva/d2.jpg", 
+        "assets/ropaDeportiva/d2-2.jpg"
+      ]
+    }
+  ]
+}
+  

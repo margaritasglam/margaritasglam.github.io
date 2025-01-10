@@ -1,0 +1,31 @@
+{
+  "productos": [
+    {
+      "nombre": "vestido baño 1",
+      "precio": 29.99,
+      "referencia": "imagen1",
+      "imagenPrincipal": "assets/vestidosDeBaño/v1.jpg",
+      "subimagenes": [
+        "assets/vestidosDeBaño/v1.jpg"
+      ]
+    },
+    {
+      "nombre": "vestido baño 2",
+      "precio": 34.99,
+      "referencia": "imagen2",
+      "imagenPrincipal": "assets/vestidosDeBaño/v2.jpg",
+      "subimagenes": [
+        "assets/vestidosDeBaño/v2.jpg"
+      ]
+    },
+    {
+      "nombre": "vestido baño 3",
+      "precio": 37.99,
+      "referencia": "imagen3",
+      "imagenPrincipal": "assets/vestidosDeBaño/v3.jpg",
+      "subimagenes": [
+        "assets/vestidosDeBaño/v1.jpg"
+      ]
+    }
+  ]
+}

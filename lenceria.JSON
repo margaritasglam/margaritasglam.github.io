@@ -1,0 +1,38 @@
+{
+    "productos": [
+      {
+        "nombre": "Conjunto Encaje",
+        "precio": 29.99,
+        "referencia": "imagen1",
+        "talla": "xs, xl, s",
+        "imagenPrincipal": "assets/lenceria/imagen1.jpg",
+        "subimagenes": [
+          "assets/lenceria/imagen1.jpg",
+          "assets/lenceria/imagen4.jpg",
+          "assets/lenceria/imagen5.jpg"
+        ]
+      },
+      {
+        "nombre": "Conjunto Satinado",
+        "precio": 34.99,
+        "referencia": "imagen2",
+        "imagenPrincipal": "assets/lenceria/imagen2.jpg",
+        "subimagenes": [
+          "assets/lenceria/imagen2.jpg",  
+          "assets/lenceria/imagen7.jpg"
+        ]
+      },
+      {
+        "nombre": "Conjunto Satinado",
+        "precio": 37.99,
+        "referencia": "imagen3",
+        "imagenPrincipal": "assets/lenceria/imagen3.jpg",
+        "subimagenes": [
+          "assets/lenceria/imagen3.jpg",  
+          "assets/lenceria/imagen6.jpg",  
+          "assets/lenceria/imagen8.jpg"
+        ]
+      }
+    ]
+}
+  

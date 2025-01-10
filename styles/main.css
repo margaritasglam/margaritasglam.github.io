@@ -1,0 +1,55 @@
+body {
+  padding: 0;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  background-image: url('../assets/fondos/fondo8.jpg'); /* Ruta de la imagen */
+  background-size: contain; /* La imagen se ajusta completamente dentro del contenedor */
+  background-repeat: repeat; /* No se repite la imagen */
+}
+
+.container-title {
+  display: flex; 
+  flex-direction: column; 
+}
+
+
+.title {
+  text-align: center;
+  font-size: 2rem; /* Tamaño de fuente para el título principal */
+  font-family: Pacifico, Dancing Script, Comic Sans MS; /* Fuente en negrita */
+  font-weight: bold; /* Hacer que el texto sea negrita */
+  background-image: linear-gradient(-10deg, #6F4F1F, #C49A6C, #FFD700); /* Gradiente entre los colores deseados */
+  background-clip: text; /* Aplica el gradiente al texto */
+  color: transparent; /* Hace que el color del texto sea transparente para que se vea el gradiente */
+  -webkit-background-clip: text; /* Para compatibilidad con navegadores Webkit */
+  margin-top: 0; /* Margen superior e inferior */
+  margin-bottom: 0;
+}
+
+.glam {
+  text-align: center; /* Centrar el texto */
+  font-size: 1.5rem; /* Tamaño de fuente para otros textos */
+  background-image: linear-gradient(-10deg, #120f0c, #9f6320, #1b1806);
+  background-clip: text; /* Aplica el gradiente al texto */
+  color: transparent;
+  margin: 0; /* Margen superior e inferior para separación */
+  margin-right: 4px;
+}
+
+
+.page-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  width: 70%;
+  max-width: 1000px; 
+  padding-right: 18px;
+  padding-bottom: 18px;
+  padding-left: 18px;
+  margin-top: 30px;
+}
+

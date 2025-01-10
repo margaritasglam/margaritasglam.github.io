@@ -1,0 +1,26 @@
+{
+    "productos": [
+      {
+        "nombre": "Pijama",
+        "precio": 40.00,
+        "referencia": "imagen1",
+        "imagenPrincipal": "assets/pijamas/p1.jpg",
+        "subimagenes": [
+          "assets/pijamas/p1.jpg",
+          "assets/pijamas/p1-2.jpg"
+        ]
+      },
+      {
+        "nombre": "pijama conejo",
+        "precio": 60.000,
+        "referencia": "p2",
+        "imagenPrincipal": "assets/pijamas/p2.jpg",
+        "subimagenes": [
+          "assets/pijamas/p2.jpg",
+          "assets/pijamas/p2-1.jpg",
+          "assets/pijamas/p2-2.jpg"
+        ]
+      }
+    ]
+}
+  
