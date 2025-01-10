@@ -135,6 +135,7 @@ async function openModal(index, archivoJson) {
   document.getElementById('reference').textContent = `Referencia: ${producto.referencia}`;
 
   document.getElementById('image-modal').classList.add('show');
+
   modalIndex = 0;
   updateModal();
 }
