@@ -114,8 +114,8 @@ async function llenarCarrusel(carruselClase, archivoJson) {
 }
 
 llenarCarrusel('lingerie', 'lenceria.json');
-llenarCarrusel('sports-clothing', 'ropaDeportiva.json');
-llenarCarrusel('swim-dresses', 'vestidosDeBaño.json');
+llenarCarrusel('sports-clothing', 'ropa_deportiva.json');
+llenarCarrusel('swim-dresses', 'vestidos_de_bano.json');
 llenarCarrusel('pajamas', 'pijamas.json');
 
 

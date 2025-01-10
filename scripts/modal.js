@@ -93,8 +93,8 @@ function cargarSubimagenes(subimagen, producto) {
 
 Promise.all([
   loadProductos('lenceria.json'),
-  loadProductos('ropaDeportiva.json'),
-  loadProductos('vestidosDeBaño.json'),
+  loadProductos('ropa_deportiva.json'),
+  loadProductos('vestidos_de_bano.json'),
   loadProductos('pijamas.json')
 ]).then(() => {
   loadModal();  
