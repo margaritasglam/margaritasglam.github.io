@@ -1,58 +1,5 @@
-/*function openModal(index) {
-    const producto = productos[index]; // Producto seleccionado
-    const modalCarousel = document.getElementById('modal-carousel');
-    modalCarousel.innerHTML = ''; // Limpia las imágenes del modal
-
-    producto.subimagenes.forEach((subimagen) => {
-      const img = document.createElement('img');
-      img.src = subimagen;
-      img.dataset.price = producto.precio;
-      img.dataset.reference = producto.referencia;
-      modalCarousel.appendChild(img);
-
-      img.addEventListener('click', () => cargarSubimagenes(subimagen, producto));
-    });
-}
-
-async function llenarLenceria() {
-  try {
-    const response = await fetch('lenceria.json');
-    const data = await response.json();
-
-    const lenceriaCarousel = document.querySelector('.carousel-group:first-of-type .carousel');
-
-    lenceriaCarousel.innerHTML = ''; // Limpia el carrusel
-
-    data.productos.forEach((producto, index) => {
-      const slide = document.createElement('div');
-      slide.classList.add('slide');
-
-      const img = document.createElement('img');
-      img.src = producto.imagenPrincipal;
-      img.alt = producto.nombre;
-      img.dataset.price = producto.precio; // Añade datos para el modal
-      img.dataset.reference = producto.referencia; // Añade datos para el modal
-      img.dataset.index = index; // Índice del producto
-
-      slide.appendChild(img);
-      lenceriaCarousel.appendChild(slide);
-    });
-
-    document.querySelectorAll('.carousel-group:first-of-type .carousel .slide img').forEach((img, index) => {
-      img.addEventListener('click', () => {
-        openModal(index, data.productos);
-      });
-    });
-
-  } catch (error) {
-    console.error('Error al cargar los productos:', error);
-  }
-}
-  
-llenarLenceria();*/
-
 function openModal(index) {
-  const producto = productos[index]; // Producto seleccionado
+  const producto = productos[index]; 
   if (!producto) {
     console.error('Producto no encontrado');
     return;
@@ -113,9 +60,9 @@ async function llenarCarrusel(carruselClase, archivoJson) {
   }
 }
 
-llenarCarrusel('lingerie', 'lenceria.json');
-llenarCarrusel('sports-clothing', 'ropa_deportiva.json');
-llenarCarrusel('swim-dresses', 'vestidos_de_bano.json');
-llenarCarrusel('pajamas', 'pijamas.json');
+llenarCarrusel('lingerie', '../lenceria.JSON');
+llenarCarrusel('sports-clothing', '../ropa_deportiva.JSON');
+llenarCarrusel('swim-dresses', '../vestidos_de_bano.JSON');
+llenarCarrusel('pajamas', '../pijamas.JSON');
 
 
