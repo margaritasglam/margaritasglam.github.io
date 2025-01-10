@@ -102,10 +102,9 @@ Promise.all([
 */
 
 let productos = [];
-let modalIndex = 0; // Mueve esto a un nivel global
+let modalIndex = 0; 
 
 async function openModal(index, archivoJson) {
-  // Cargar el archivo JSON solo cuando sea necesario
   const response = await fetch(archivoJson);
   const data = await response.json();
   const producto = data.productos[index];
@@ -115,16 +114,15 @@ async function openModal(index, archivoJson) {
   }
 
   const modalCarousel = document.getElementById('modal-carousel');
-  modalCarousel.innerHTML = ''; // Limpia las imágenes del modal
+  modalCarousel.innerHTML = ''; 
 
-  // Asegúrate de que subimagenes exista y no esté vacío
   if (producto.subimagenes && producto.subimagenes.length > 0) {
     producto.subimagenes.forEach((subimagen, idx) => {
       const img = document.createElement('img');
       img.src = subimagen;
       img.dataset.price = producto.precio;
       img.dataset.reference = producto.referencia;
-      img.dataset.index = idx; // Agregar un índice a cada imagen
+      img.dataset.index = idx; 
       modalCarousel.appendChild(img);
 
       img.addEventListener('click', () => cargarSubimagenes(subimagen, producto, idx));
@@ -143,18 +141,17 @@ async function openModal(index, archivoJson) {
 
 function cargarSubimagenes(subimagen, producto, index) {
   const modalCarousel = document.getElementById('modal-carousel');
-  modalCarousel.innerHTML = ''; // Limpiar imágenes previas
+  modalCarousel.innerHTML = '';
 
   producto.subimagenes.forEach((subimg, idx) => {
     const img = document.createElement('img');
     img.src = subimg;
     img.dataset.price = producto.precio;
     img.dataset.reference = producto.referencia;
-    img.dataset.index = idx; // Añadir índice a cada imagen
+    img.dataset.index = idx; 
     modalCarousel.appendChild(img);
   });
 
-  // Actualizar modalIndex al índice de la imagen seleccionada
   modalIndex = index;
   updateModal();
 }
@@ -170,7 +167,6 @@ function updateModal() {
   document.getElementById('reference').textContent = `Referencia: ${currentImage.dataset.reference}`;
 }
 
-// Configurar eventos del modal
 function setupModalEvents() {
   if (!document.getElementById('image-modal')) {
     return;
@@ -182,18 +178,17 @@ function setupModalEvents() {
 
   document.getElementById('modal-left').addEventListener('click', () => {
     const total = document.querySelectorAll('#modal-carousel img').length;
-    modalIndex = (modalIndex - 1 + total) % total; // Asegurarse de que el índice se mantenga dentro de los límites
+    modalIndex = (modalIndex - 1 + total) % total; 
     updateModal();
   });
 
   document.getElementById('modal-right').addEventListener('click', () => {
     const total = document.querySelectorAll('#modal-carousel img').length;
-    modalIndex = (modalIndex + 1) % total; // Asegurarse de que el índice se mantenga dentro de los límites
+    modalIndex = (modalIndex + 1) % total; 
     updateModal();
   });
 }
 
-// Cargar el modal HTML
 async function loadModal() {
   const response = await fetch('components/modal.html');
   const modalHTML = await response.text();
@@ -202,6 +197,5 @@ async function loadModal() {
   setupModalEvents();
 }
 
-// Inicializar
 loadModal();
 

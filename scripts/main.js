@@ -72,11 +72,9 @@ async function llenarCarrusel(carruselClase, archivoJson) {
     const response = await fetch(archivoJson);
     const data = await response.json();
 
-    // Obtener el contenedor del carrusel de acuerdo con la clase
     const carrusel = document.querySelector(`.carousel-group .carousel-container.${carruselClase} .carousel`);
     carrusel.innerHTML = ''; 
 
-    // Llenar el carrusel con las imágenes
     data.productos.forEach((producto, index) => {
       const slide = document.createElement('div');
       slide.classList.add('slide');
@@ -84,16 +82,15 @@ async function llenarCarrusel(carruselClase, archivoJson) {
       const img = document.createElement('img');
       img.src = producto.imagenPrincipal;
       img.alt = producto.nombre;
-      img.dataset.price = producto.precio; // Añadir datos para el modal
-      img.dataset.reference = producto.referencia; // Añadir datos para el modal
-      img.dataset.index = index; // Índice del producto
-      img.dataset.title = producto.nombre; // Añadir título para saber a qué pertenece
+      img.dataset.price = producto.precio; 
+      img.dataset.reference = producto.referencia; 
+      img.dataset.index = index;
+      img.dataset.title = producto.nombre; 
       img.dataset.subimages = JSON.stringify(producto.subimagenes);
 
       slide.appendChild(img);
       carrusel.appendChild(slide);
 
-      // Añadir el evento click para abrir el modal
       img.addEventListener('click', () => {
         openModal(index, archivoJson);
       });
@@ -103,7 +100,6 @@ async function llenarCarrusel(carruselClase, archivoJson) {
   }
 }
 
-// Llenar los carruseles de cada categoría con sus archivos JSON correspondientes
 llenarCarrusel('lingerie', '../lenceria.JSON');
 llenarCarrusel('sports-clothing', '../ropa_deportiva.JSON');
 llenarCarrusel('swim-dresses', '../vestidos_de_bano.JSON');
