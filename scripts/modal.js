@@ -1,4 +1,4 @@
-let productos = []; 
+/*let productos = []; 
 
 async function loadProductos(archivoJson) {
     const response = await fetch(archivoJson);
@@ -99,65 +99,81 @@ Promise.all([
 ]).then(() => {
   loadModal();  
 });
+*/
 
-/*let productos = []; 
+let productos = [];
+let modalIndex = 0; // Mueve esto a un nivel global
 
-async function loadProductos() {
-  const response = await fetch('lenceria.json');
+async function openModal(index, archivoJson) {
+  // Cargar el archivo JSON solo cuando sea necesario
+  const response = await fetch(archivoJson);
   const data = await response.json();
-  productos = data.productos;
-}
-
-async function loadModal() {
-  const response = await fetch('components/modal.html');
-  const modalHTML = await response.text();
-  document.body.insertAdjacentHTML('beforeend', modalHTML);
-
-  setupModalEvents(); 
-}
-
-function setupModalEvents() {
-  if (!document.getElementById('image-modal')) {
+  const producto = data.productos[index];
+  if (!producto) {
+    console.error('Producto no encontrado');
     return;
   }
 
-  let modalIndex = 0;
+  const modalCarousel = document.getElementById('modal-carousel');
+  modalCarousel.innerHTML = ''; // Limpia las imágenes del modal
 
-  function updateModal() {
-    const modalCarousel = document.getElementById('modal-carousel');
-    const offset = -modalIndex * 100;
-    modalCarousel.style.transform = `translateX(${offset}%)`;
-
-    const images = document.querySelectorAll('#modal-carousel img');
-    const currentImage = images[modalIndex];
-    document.getElementById('price').textContent = `Precio: ${currentImage.dataset.price}`;
-    document.getElementById('reference').textContent = `Referencia: ${currentImage.dataset.reference}`;
-  }
-
-  function openModal(index, carruselId) {
-    const producto = productos[index];
-    const modalCarousel = document.getElementById('modal-carousel');
-    modalCarousel.innerHTML = '';
-
-    // Filtramos las imágenes por el carrusel de origen
-    const subimagenes = producto.subimagenes.filter(subimagen => subimagen.includes(carruselId));
-
-    subimagenes.forEach((subimagen) => {
+  // Asegúrate de que subimagenes exista y no esté vacío
+  if (producto.subimagenes && producto.subimagenes.length > 0) {
+    producto.subimagenes.forEach((subimagen, idx) => {
       const img = document.createElement('img');
       img.src = subimagen;
       img.dataset.price = producto.precio;
       img.dataset.reference = producto.referencia;
+      img.dataset.index = idx; // Agregar un índice a cada imagen
       modalCarousel.appendChild(img);
 
-      img.addEventListener('click', () => cargarSubimagenes(subimagen, producto));
+      img.addEventListener('click', () => cargarSubimagenes(subimagen, producto, idx));
     });
+  } else {
+    console.error('No se encontraron subimágenes para este producto');
+  }
 
-    document.getElementById('price').textContent = `Precio: $${producto.precio}`;
-    document.getElementById('reference').textContent = `Referencia: ${producto.referencia}`;
+  document.getElementById('price').textContent = `Precio: $${producto.precio}`;
+  document.getElementById('reference').textContent = `Referencia: ${producto.referencia}`;
 
-    document.getElementById('image-modal').classList.add('show');
-    modalIndex = 0; 
-    updateModal();
+  document.getElementById('image-modal').classList.add('show');
+  modalIndex = 0;
+  updateModal();
+}
+
+function cargarSubimagenes(subimagen, producto, index) {
+  const modalCarousel = document.getElementById('modal-carousel');
+  modalCarousel.innerHTML = ''; // Limpiar imágenes previas
+
+  producto.subimagenes.forEach((subimg, idx) => {
+    const img = document.createElement('img');
+    img.src = subimg;
+    img.dataset.price = producto.precio;
+    img.dataset.reference = producto.referencia;
+    img.dataset.index = idx; // Añadir índice a cada imagen
+    modalCarousel.appendChild(img);
+  });
+
+  // Actualizar modalIndex al índice de la imagen seleccionada
+  modalIndex = index;
+  updateModal();
+}
+
+function updateModal() {
+  const modalCarousel = document.getElementById('modal-carousel');
+  const offset = -modalIndex * 100;
+  modalCarousel.style.transform = `translateX(${offset}%)`;
+
+  const images = document.querySelectorAll('#modal-carousel img');
+  const currentImage = images[modalIndex];
+  document.getElementById('price').textContent = `Precio: ${currentImage.dataset.price}`;
+  document.getElementById('reference').textContent = `Referencia: ${currentImage.dataset.reference}`;
+}
+
+// Configurar eventos del modal
+function setupModalEvents() {
+  if (!document.getElementById('image-modal')) {
+    return;
   }
 
   document.getElementById('modal-close').addEventListener('click', () => {
@@ -166,40 +182,26 @@ function setupModalEvents() {
 
   document.getElementById('modal-left').addEventListener('click', () => {
     const total = document.querySelectorAll('#modal-carousel img').length;
-    modalIndex = (modalIndex - 1 + total) % total;
+    modalIndex = (modalIndex - 1 + total) % total; // Asegurarse de que el índice se mantenga dentro de los límites
     updateModal();
   });
 
   document.getElementById('modal-right').addEventListener('click', () => {
     const total = document.querySelectorAll('#modal-carousel img').length;
-    modalIndex = (modalIndex + 1) % total;
+    modalIndex = (modalIndex + 1) % total; // Asegurarse de que el índice se mantenga dentro de los límites
     updateModal();
   });
-
-  // Aquí detectamos qué carrusel fue clickeado
-  document.querySelectorAll('.slide img').forEach((img, index) => {
-    img.addEventListener('click', () => {
-      const carruselId = img.closest('.carousel').id;  // Obtener el ID del carrusel contenedor
-      openModal(index, carruselId);
-    });
-  });
 }
 
-function cargarSubimagenes(subimagen, producto) {
-  const modalCarousel = document.getElementById('modal-carousel');
-  modalCarousel.innerHTML = ''; 
+// Cargar el modal HTML
+async function loadModal() {
+  const response = await fetch('components/modal.html');
+  const modalHTML = await response.text();
+  document.body.insertAdjacentHTML('beforeend', modalHTML);
 
-  producto.subimagenes.forEach((subimg) => {
-    const img = document.createElement('img');
-    img.src = subimg;
-    img.dataset.price = producto.precio;
-    img.dataset.reference = producto.referencia;
-    modalCarousel.appendChild(img);
-  });
+  setupModalEvents();
 }
 
-loadProductos();
-loadModal();*/
-
-
+// Inicializar
+loadModal();
 
