@@ -53,3 +53,28 @@ body {
   margin-top: 30px;
 }
 
+footer {
+  text-align: center;
+  background-color: #333;
+  color: white;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  margin-top: 40px;
+}
+
+.footer a.custom-link {
+  text-decoration: none;
+  font-weight: bold;
+  margin-left: 5px;
+}
+
+.footer a.custom-link:hover {
+  color: #ff4081;
+  text-decoration: none;
+}
+
+.footer .fa-instagram {
+  margin-right: 2px; 
+  color: #e91e63; 
+}

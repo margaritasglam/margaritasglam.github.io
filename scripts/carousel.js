@@ -18,5 +18,5 @@ document.querySelectorAll('.carousel-wrapper').forEach((container) => {
       const slideWidth = carousel.children[0].offsetWidth;
       carousel.style.transform = `translateX(-${currentSlide * slideWidth}px)`;
     }
-  });
+});
   
