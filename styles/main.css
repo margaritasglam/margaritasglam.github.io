@@ -64,6 +64,7 @@ footer {
 }
 
 .footer a.custom-link {
+  color: blueviolet;
   text-decoration: none;
   font-weight: bold;
   margin-left: 5px;
