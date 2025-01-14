@@ -1,38 +1,294 @@
 {
     "productos": [
       {
-        "nombre": "Conjunto Encaje",
-        "precio": 29.99,
-        "referencia": "imagen1",
-        "talla": "xs, xl, s",
-        "imagenPrincipal": "assets/lenceria/imagen1.jpg",
+        "precio": 45000,
+        "referencia": "MG-LEN001",
+        "talla": "S,M,L,XL",
+        "imagenPrincipal": "assets/lenceria/MG-LEN001.jpg",
         "subimagenes": [
-          "assets/lenceria/imagen1.jpg",
-          "assets/lenceria/imagen4.jpg",
-          "assets/lenceria/imagen5.jpg"
+          "assets/lenceria/MG-LEN001.jpg"
         ]
       },
       {
-        "nombre": "Conjunto Satinado",
-        "precio": 34.99,
-        "referencia": "imagen2",
-        "imagenPrincipal": "assets/lenceria/imagen2.jpg",
+        "precio": 45000,
+        "referencia": "MG-LEN002",
+        "talla": "S,M,L,XL",
+        "imagenPrincipal": "assets/lenceria/MG-LEN002.jpg",
         "subimagenes": [
-          "assets/lenceria/imagen2.jpg",  
-          "assets/lenceria/imagen7.jpg"
+          "assets/lenceria/MG-LEN002.jpg"
+        ]
+      }, 
+      {
+        "precio": 45000,
+        "referencia": "MG-LEN003",
+        "talla": "S,M,L,XL",
+        "imagenPrincipal": "assets/lenceria/MG-LEN003.jpg",
+        "subimagenes": [
+          "assets/lenceria/MG-LEN003.jpg"
         ]
       },
       {
-        "nombre": "Conjunto Satinado",
-        "precio": 37.99,
-        "referencia": "imagen3",
-        "imagenPrincipal": "assets/lenceria/imagen3.jpg",
+        "precio": 45000,
+        "referencia": "MG-LEN004",
+        "talla": "S,M,L,XL",
+        "imagenPrincipal": "assets/lenceria/MG-LEN004.jpg",
         "subimagenes": [
-          "assets/lenceria/imagen3.jpg",  
-          "assets/lenceria/imagen6.jpg",  
-          "assets/lenceria/imagen8.jpg"
-        ]
+          "assets/lenceria/MG-LEN004.jpg"
+        ] 
+      },
+      {
+        "precio": 55000,
+        "referencia": "MG-LEN005",
+        "talla": "S,M,L,XL",
+        "imagenPrincipal": "assets/lenceria/MG-LEN005.jpg",
+        "subimagenes": [
+          "assets/lenceria/MG-LEN005.jpg"
+        ] 
+      },
+      {
+        "precio": 45000,
+        "referencia": "MG-LEN006",
+        "talla": "S,M,L,XL",
+        "imagenPrincipal": "assets/lenceria/MG-LEN006.jpg",
+        "subimagenes": [
+          "assets/lenceria/MG-LEN006.jpg"
+        ] 
+      },
+      {
+        "precio": 45000,
+        "referencia": "MG-LEN007",
+        "talla": "S,M,L,XL",
+        "imagenPrincipal": "assets/lenceria/MG-LEN007.jpg",
+        "subimagenes": [
+          "assets/lenceria/MG-LEN007.jpg"
+        ] 
+      },
+      {
+        "precio": 55000,
+        "referencia": "MG-LEN008",
+        "talla": "S,M,L,XL",
+        "imagenPrincipal": "assets/lenceria/MG-LEN008.jpg",
+        "subimagenes": [
+          "assets/lenceria/MG-LEN008.jpg"
+        ] 
+      },
+      {
+        "precio": 60000,
+        "referencia": "MG-LEN009",
+        "talla": "S,M,L,XL",
+        "imagenPrincipal": "assets/lenceria/MG-LEN009.jpg",
+        "subimagenes": [
+          "assets/lenceria/MG-LEN009.jpg"
+        ] 
+      },
+      {
+        "precio": 45000,
+        "referencia": "MG-LEN010",
+        "talla": "S,M,L,XL",
+        "imagenPrincipal": "assets/lenceria/MG-LEN010.jpg",
+        "subimagenes": [
+          "assets/lenceria/MG-LEN010.jpg"
+        ] 
+      },
+      {
+        "precio": 65000,
+        "referencia": "MG-LEN011",
+        "talla": "S,M,L,XL",
+        "imagenPrincipal": "assets/lenceria/MG-LEN011.jpg",
+        "subimagenes": [
+          "assets/lenceria/MG-LEN011.jpg"
+        ] 
+      },
+      {
+        "precio": 30000,
+        "referencia": "MG-LEN012",
+        "talla": "S,M,L,XL",
+        "imagenPrincipal": "assets/lenceria/MG-LEN012.jpg",
+        "subimagenes": [
+          "assets/lenceria/MG-LEN012.jpg"
+        ] 
+      },
+      {
+        "precio": 45000,
+        "referencia": "MG-LEN013",
+        "talla": "S,M,L,XL",
+        "imagenPrincipal": "assets/lenceria/MG-LEN013.jpg",
+        "subimagenes": [
+          "assets/lenceria/MG-LEN013.jpg"
+        ] 
+      },
+      {
+        "precio": 40000,
+        "referencia": "MG-LEN014",
+        "talla": "XS,S,M,L,",
+        "imagenPrincipal": "assets/lenceria/MG-LEN014.jpg",
+        "subimagenes": [
+          "assets/lenceria/MG-LEN014.jpg"
+        ] 
+      },
+      {
+        "precio": 45000,
+        "referencia": "MG-LEN015",
+        "talla": "S,,M,L,XL,",
+        "imagenPrincipal": "assets/lenceria/MG-LEN015.jpg",
+        "subimagenes": [
+          "assets/lenceria/MG-LEN015.jpg"
+        ] 
+      },
+      {
+        "precio": 45000,
+        "referencia": "MG-LEN016",
+        "talla": "S,M,L,",
+        "imagenPrincipal": "assets/lenceria/MG-LEN016.jpg",
+        "subimagenes": [
+          "assets/lenceria/MG-LEN016.jpg"
+        ] 
+      },
+      {
+        "precio": 45000,
+        "referencia": "MG-LEN017",
+        "talla": "S,M,L,",
+        "imagenPrincipal": "assets/lenceria/MG-LEN017.jpg",
+        "subimagenes": [
+          "assets/lenceria/MG-LEN017.jpg"
+        ] 
+      },
+      {
+        "precio": 45000,
+        "referencia": "MG-LEN018",
+        "talla": "S,M,L,XL,",
+        "imagenPrincipal": "assets/lenceria/MG-LEN018.jpg",
+        "subimagenes": [
+          "assets/lenceria/MG-LEN018.jpg"
+        ] 
+      },
+      {
+        "precio": 58000,
+        "referencia": "MG-LEN019",
+        "talla": "S,M,L,XL,",
+        "imagenPrincipal": "assets/lenceria/MG-LEN019.jpg",
+        "subimagenes": [
+          "assets/lenceria/MG-LEN019.jpg"
+        ] 
+      },
+      {
+        "precio": 36000,
+        "referencia": "MG-LEN020",
+        "talla": "S,M,L,XL,",
+        "imagenPrincipal": "assets/lenceria/MG-LEN020.jpg",
+        "subimagenes": [
+          "assets/lenceria/MG-LEN020.jpg"
+        ] 
+      },
+      {
+        "precio": 45000,
+        "referencia": "MG-LEN021",
+        "talla": "S,M,L,XL,",
+        "imagenPrincipal": "assets/lenceria/MG-LEN021.jpg",
+        "subimagenes": [
+          "assets/lenceria/MG-LEN021.jpg"
+        ] 
+      },
+      {
+        "precio": 45000,
+        "referencia": "MG-LEN022",
+        "talla": "S,M,L,XL,",
+        "imagenPrincipal": "assets/lenceria/MG-LEN022.jpg",
+        "subimagenes": [
+          "assets/lenceria/MG-LEN022.jpg"
+        ] 
+      },
+      {
+        "precio": 45000,
+        "referencia": "MG-LEN023",
+        "talla": "S,M,L,XL,",
+        "imagenPrincipal": "assets/lenceria/MG-LEN023.jpg",
+        "subimagenes": [
+          "assets/lenceria/MG-LEN023.jpg"
+        ] 
+      },
+      {
+        "precio": 45000,
+        "referencia": "MG-LEN024",
+        "talla": "S,M,L,XL,",
+        "imagenPrincipal": "assets/lenceria/MG-LEN024.jpg",
+        "subimagenes": [
+          "assets/lenceria/MG-LEN024.jpg"
+        ] 
+      },
+      {
+        "precio": 45000,
+        "referencia": "MG-LEN025",
+        "talla": "S,M,L,XL,",
+        "imagenPrincipal": "assets/lenceria/MG-LEN025.jpg",
+        "subimagenes": [
+          "assets/lenceria/MG-LEN025.jpg"
+        ] 
+      },
+      {
+        "precio": 45000,
+        "referencia": "MG-LEN026",
+        "talla": "S,M,L,XL,",
+        "imagenPrincipal": "assets/lenceria/MG-LEN026.jpg",
+        "subimagenes": [
+          "assets/lenceria/MG-LEN026.jpg"
+        ] 
+      },
+      {
+        "precio": 65.000,
+        "referencia": "MG-LEN028",
+        "talla": "S,M,L,XL,",
+        "imagenPrincipal": "assets/lenceria/MG-LEN028.jpg",
+        "subimagenes": [
+          "assets/lenceria/MG-LEN028.jpg"
+        ] 
+      },
+      {
+        "precio": 65.000,
+        "referencia": "MG-LEN029",
+        "talla": "S,M,L,XL,",
+        "imagenPrincipal": "assets/lenceria/MG-LEN029.jpg",
+        "subimagenes": [
+          "assets/lenceria/MG-LEN029.jpg"
+        ] 
+      },
+      {
+        "precio": 68.000,
+        "referencia": "MG-LEN030",
+        "talla": "S,M,L,XL,",
+        "imagenPrincipal": "assets/lenceria/MG-LEN030.jpg",
+        "subimagenes": [
+          "assets/lenceria/MG-LEN030.jpg"
+        ] 
+      },
+      
+      {
+        "precio": 70.000,
+        "referencia": "MG-LEN031",
+        "talla": "S,M,L,",
+        "imagenPrincipal": "assets/lenceria/MG-LEN031.jpg",
+        "subimagenes": [
+          "assets/lenceria/MG-LEN031.jpg"
+        ] 
+      },
+      {
+        "precio": 75.000,
+        "referencia": "MG-LEN032",
+        "talla": "S,M,L,XL",
+        "imagenPrincipal": "assets/lenceria/MG-LEN032.jpg",
+        "subimagenes": [
+          "assets/lenceria/MG-LEN032.jpg"
+        ] 
+      },
+      {
+        "precio": 75.000,
+        "referencia": "MG-LEN033",
+        "talla": "S,M,L,XL",
+        "imagenPrincipal": "assets/lenceria/MG-LEN033.jpg",
+        "subimagenes": [
+          "assets/lenceria/MG-LEN033.jpg"
+        ] 
       }
-    ]
+  ]
 }
-  
+
